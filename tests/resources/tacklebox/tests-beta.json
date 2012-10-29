@@ -1,0 +1,7 @@
+{
+    "events": [
+        "beta"
+    ], 
+    "name": "Beta Tests.", 
+    "path": "tests.test_beta.BetaHook"
+}
