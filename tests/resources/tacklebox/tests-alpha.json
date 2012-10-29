@@ -1,0 +1,7 @@
+{
+    "name": "Alpha Tests.",
+    "path": "tests.test_alpha.AlphaHook",
+    "events": [
+        "alpha"
+    ]
+}
