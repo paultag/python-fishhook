@@ -13,6 +13,7 @@ class AlphaHook(Hook):
     def fire(self, caller, event, obj):
         global _test_obj
         _test_obj = obj
+        assert event == 'alpha'
 
 
 def test_standard_fire():
