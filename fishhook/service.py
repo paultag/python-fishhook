@@ -12,5 +12,5 @@ class Hook(object):
 
 def fire(caller, event, obj):
     for plugin in load_by_event(event):
-        obj = plugin()
-        obj.fire(caller, event, obj)
+        o = plugin()
+        o.fire(caller, event, obj)
