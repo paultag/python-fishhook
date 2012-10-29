@@ -20,3 +20,5 @@
 
 __appname__ = "fishhook"
 __version__ = "0.1~pre1"
+
+from fishhook.service import Hook  # noqa
