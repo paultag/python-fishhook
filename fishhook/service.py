@@ -28,11 +28,11 @@ class Hook(object):
     """
 
     @abstractmethod
-    def fire(self, caller, event, obj):
+    def fire(self, event, obj):
         """
         Fire an Event.
         """
-        pass
+        fire(self, event, obj)
 
 
 def fire(caller, event, obj):
