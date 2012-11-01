@@ -40,6 +40,9 @@ def load_by_event(event_name):
     """
     ret = []
     tacklebox = fishhook.core.TACKLEBOX
+    if not os.path.exists(tacklebox):
+        return
+
     modules = os.listdir(tacklebox)
     for module in modules:
         path = os.path.abspath("%s/%s" % (
