@@ -50,7 +50,7 @@ def load_by_event(event_name):
             module
         ))
         obj = json.load(open(path, 'r'))
-        if event_name in obj['events']:
+        if event_name in obj['events'] or obj['promiscuous']:
             try:
                 yield import_by_name(obj['path'])
             finally:
