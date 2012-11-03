@@ -5,8 +5,8 @@ from fishhook import Hook
 from fishhook.service import fire
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "."))
-
 _callees = []
+
 
 class BetaHook(Hook):
     def fire(self, caller, event, obj):

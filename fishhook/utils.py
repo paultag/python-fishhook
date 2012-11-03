@@ -38,7 +38,6 @@ def load_by_event(event_name):
     """
     Fire off all events that go by event_name.
     """
-    ret = []
     tacklebox = fishhook.core.TACKLEBOX
     if not os.path.exists(tacklebox):
         return
@@ -50,7 +49,8 @@ def load_by_event(event_name):
             module
         ))
         obj = json.load(open(path, 'r'))
-        if event_name in obj['events'] or obj['promiscuous']:
+        if ('events' in obj and event_name in obj['events']) or \
+           ('promiscuous' in obj and obj['promiscuous']):
             try:
                 yield import_by_name(obj['path'])
             finally:
